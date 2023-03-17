@@ -19,20 +19,28 @@ The *Conformer block* is made up of 3 modules [Convolution Module](#convolution-
 
 #### Pointwise Conv
 ```
-Pointwise convolution is convolution with a kernel size of 1x1. This preserves the height and width of the "image", but compresses the number of channels, into a form of encoding representing the 3 channels. 
+Pointwise convolution is convolution with a kernel size of 1x1. 
+This preserves the height and width of the "image", but 
+compresses the number of channels, into a form of encoding 
+representing the 3 channels. 
 ```
 <img src="./pointwise.png">
 
-- Glu Activation
+#### GLU Activation: https://paperswithcode.com/method/glu
+
 - 1D Depthwise Conv
 - BatchNorm
 
 #### Swish Activation: https://paperswithcode.com/method/swish
 ```
-"Swish is an activation function, f(x) = x • sigmoid(ßx), where ß a learnable parameter. Nearly all implementations do not use the learnable parameter ß, in which case the activation function is xσ(x) ("Swish-1").
+"Swish is an activation function, f(x) = x • sigmoid(ßx), 
+where ß a learnable parameter. Nearly all implementations 
+do not use the learnable parameter ß, in which case the 
+activation function is xσ(x) ("Swish-1").
 
 
-The function  is exactly the SiLU, which was introduced by other authors before the swish."
+The function xσ(x) is exactly the SiLU, which was 
+introduced by other authors before the swish."
 ```    
 
 - [Pointwise Conv](#pointwise-conv)
@@ -81,5 +89,18 @@ The function  is exactly the SiLU, which was introduced by other authors before 
   booktitle={LREC},
   year={2008},
   organization={Citeseer}
+}
+```
+
+```bibtex
+@misc{https://doi.org/10.48550/arxiv.1606.08415,
+  doi = {10.48550/ARXIV.1606.08415},
+  url = {https://arxiv.org/abs/1606.08415},
+  author = {Hendrycks, Dan and Gimpel, Kevin},
+  keywords = {Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Gaussian Error Linear Units (GELUs)},
+  publisher = {arXiv},
+  year = {2016},
+  copyright = {arXiv.org perpetual, non-exclusive license}
 }
 ```
