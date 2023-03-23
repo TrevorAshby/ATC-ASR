@@ -2,9 +2,10 @@
 Air Traffic Control - Automatic Speech Recognition - CS 674: Project 2
 |Date|Time|Accomplished|
 |---|---|---
-3/16/22 | 11:00AM-12:30PM=**1.5hrs** | Began README, downloaded initial dataset, began looking for resources about the conformer architecture. Started implementing the <a href="https://paperswithcode.com/method/swish">Swish</a> activation function and the complete linear module.
-3/16/22 | 8:30PM-9:45PM=**1.25hrs** | 
-|**Total**|**2.75hrs**|
+3/16/23 | 11:00AM-1:00PM=**2hrs** | Began README, downloaded initial dataset, began looking for resources about the conformer architecture. Started implementing the <a href="https://paperswithcode.com/method/swish">Swish</a> activation function and the complete linear module.
+3/16/23 | 8:30PM-11:00PM=**2.5hrs** | Finished readme, and began working on the convolution module along with the MHSA module.
+3/22/23 | 6:00PM-7:30PM, 9:30PM-11:30PM = **2hrs**|
+|**Total**|**6.5hrs**|
 
 ## Conformer Architecture
 - SpecAug
@@ -14,6 +15,8 @@ Air Traffic Control - Automatic Speech Recognition - CS 674: Project 2
 - *Conformer Block* x N
 
 The *Conformer block* is made up of 3 modules [Convolution Module](#convolution-module), [MHSA Module](#multi-headed-self-attention-module), and [Feed Forward Module](#feed-forward-module):
+
+<img src="./conformer.png" width=600px>
 
 ### 1 Convolution Module
 #### 1.1 Layernorm: https://paperswithcode.com/method/layer-normalization
@@ -218,6 +221,7 @@ class MultiHeadSelfAttention(nn.Module):
 - Conformer: https://arxiv.org/pdf/2005.08100v1.pdf
 - Efficient Conformer: https://arxiv.org/pdf/2109.01163.pdf
 - Dataset: https://www.spsc.tugraz.at/databases-and-tools/atcosim-air-traffic-control-simulation-speech-corpus.html
+- Github example: https://github.com/sooftware/conformer/tree/main
 
 ## References
 ```bibtex
