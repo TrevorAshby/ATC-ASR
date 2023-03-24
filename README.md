@@ -5,8 +5,8 @@ Air Traffic Control - Automatic Speech Recognition - CS 674: Project 2
 3/16/23 | 11:00AM-1:00PM=**2hrs** | Began README, downloaded initial dataset, began looking for resources about the conformer architecture. Started implementing the <a href="https://paperswithcode.com/method/swish">Swish</a> activation function and the complete linear module.
 3/16/23 | 8:30PM-11:00PM=**2.5hrs** | Finished readme, and began working on the convolution module along with the MHSA module.
 3/22/23 | 6:00PM-7:30PM, 9:30PM-11:30PM = **3.5hrs**| Finished first draft of all the moduels, began processing the dataset, and began building the training file.
-3/23/23 | 5:00PM-
-|**Total**|**8hrs**|
+3/23/23 | 5:00PM-8:30PM=**3.5hrs**| Finished building the forward function for the conformer using 1 sample (will need to standardize for every length of input). Also added the final LSTM decoder to the end of the model.
+|**Total**|**11.5hrs**|
 
 ## Conformer Architecture
 - SpecAug
