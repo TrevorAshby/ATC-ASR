@@ -57,7 +57,7 @@ class ConformerEncoder(nn.Module):
         self.relu = nn.ReLU()
 
         self.linear = nn.Linear(encoder_dim * 72, encoder_dim)
-        self.dropout = nn.Dropout(p=0.5)
+        self.dropout = nn.Dropout(p=0.1)
 
         #conformer block x N
         self.blocks = [ConformerBlock(dim_model=encoder_dim, attn_heads=att_heads, kernel_size=kernel_size).cuda() for x in range(num_blocks)]

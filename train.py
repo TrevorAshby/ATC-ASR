@@ -1,4 +1,5 @@
 import torch
+import torch.nn as nn
 import torchaudio
 import matplotlib.pyplot as plt
 import numpy as np
@@ -36,3 +37,8 @@ if __name__ == "__main__":
     the_out = conformer(torch.tensor(wav_feature).float().unsqueeze(0).unsqueeze(0).cuda())
     print(the_out.shape) # 1, 19, 256
 
+    # Single-LSTM-layer decoder in all the models.
+    lstm = nn.LSTM(256, 640).cuda()
+    final_final_out, (final_hidden_state, final_cell_state) = lstm(the_out)
+    print("the final final out shape: ", final_final_out.shape)
+    print("the final final out: ", final_final_out)

@@ -24,7 +24,7 @@ class ConvolutionModule(nn.Module):
         # swish = x * x.sigmoid()
         self.pointwise2 = nn.Conv1d(in_channels=d_module, out_channels=d_module, 
                                     kernel_size=1, padding=0, bias=True)
-        self.dropout = nn.Dropout(p=0.5)
+        self.dropout = nn.Dropout(p=0.1)
 
     def forward(self, x):
         out = self.layernorm(x)
